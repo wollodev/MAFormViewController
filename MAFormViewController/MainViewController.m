@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "MAFormViewController.h"
 #import "MAFormField.h"
+#import "MAActionField.h"
 
 @interface MainViewController ()
 
@@ -37,6 +38,9 @@
     // create the cells
     MAFormField *name = [MAFormField fieldWithKey:@"name" type:MATextFieldTypeName initialValue:nil placeholder:@"Full Name" required:YES];
     MAFormField *phone = [MAFormField fieldWithKey:@"phone" type:MATextFieldTypePhone initialValue:nil placeholder:@"Phone Number" required:YES];
+    MAActionField *actionTest = [MAActionField fieldWithTitle:@"Pess for Action" actionBlock:^{
+        NSLog(@"FOOBAAAAAR!!!");
+    }];
     MAFormField *email = [MAFormField fieldWithKey:@"email" type:MATextFieldTypeEmail initialValue:nil placeholder:@"Email (optional)" required:NO];
     MAFormField *street = [MAFormField fieldWithKey:@"street" type:MATextFieldTypeAddress initialValue:nil placeholder:@"Street" required:YES];
     MAFormField *city = [MAFormField fieldWithKey:@"city" type:MATextFieldTypeAddress initialValue:nil placeholder:@"City" required:YES];
@@ -44,7 +48,7 @@
     MAFormField *zip = [MAFormField fieldWithKey:@"zip" type:MATextFieldTypeZIP initialValue:nil placeholder:@"ZIP" required:YES];
     
     // separate the cells into sections
-    NSArray *firstSection = @[name, phone, email];
+    NSArray *firstSection = @[name, phone, email, actionTest];
     NSArray *secondSection = @[street, city, state, zip];
     NSArray *cellConfig = @[firstSection, secondSection];
     

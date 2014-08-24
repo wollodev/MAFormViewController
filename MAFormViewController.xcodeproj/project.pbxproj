@@ -16,6 +16,8 @@
 		278140481980A70D00053209 /* MAFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278140471980A70D00053209 /* MAFormViewController.m */; };
 		2781404B1980A86400053209 /* MAFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2781404A1980A86400053209 /* MAFormField.m */; };
 		2781404E1980B19F00053209 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2781404D1980B19F00053209 /* MainViewController.m */; };
+		D6626B5D19AA2A2500A9A82D /* MAActionField.m in Sources */ = {isa = PBXBuildFile; fileRef = D6626B5C19AA2A2500A9A82D /* MAActionField.m */; };
+		D6626B6019AA2C3900A9A82D /* MAActionFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6626B5F19AA2C3900A9A82D /* MAActionFieldCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		2781404A1980A86400053209 /* MAFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAFormField.m; sourceTree = "<group>"; };
 		2781404C1980B19F00053209 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		2781404D1980B19F00053209 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		D6626B5B19AA2A2500A9A82D /* MAActionField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAActionField.h; sourceTree = "<group>"; };
+		D6626B5C19AA2A2500A9A82D /* MAActionField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAActionField.m; sourceTree = "<group>"; };
+		D6626B5E19AA2C3900A9A82D /* MAActionFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAActionFieldCell.h; sourceTree = "<group>"; };
+		D6626B5F19AA2C3900A9A82D /* MAActionFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAActionFieldCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,10 @@
 				2781404A1980A86400053209 /* MAFormField.m */,
 				278140411980A6D800053209 /* MATextFieldCell.h */,
 				278140421980A6D800053209 /* MATextFieldCell.m */,
+				D6626B5B19AA2A2500A9A82D /* MAActionField.h */,
+				D6626B5C19AA2A2500A9A82D /* MAActionField.m */,
+				D6626B5E19AA2C3900A9A82D /* MAActionFieldCell.h */,
+				D6626B5F19AA2C3900A9A82D /* MAActionFieldCell.m */,
 			);
 			name = "Objective-C";
 			sourceTree = "<group>";
@@ -258,10 +268,12 @@
 			files = (
 				2781402A1980A6C100053209 /* AppDelegate.m in Sources */,
 				2781404E1980B19F00053209 /* MainViewController.m in Sources */,
+				D6626B5D19AA2A2500A9A82D /* MAActionField.m in Sources */,
 				2781404B1980A86400053209 /* MAFormField.m in Sources */,
 				27212FF9199B048000DC9C90 /* MAFormField.swift in Sources */,
 				278140271980A6C100053209 /* main.m in Sources */,
 				278140481980A70D00053209 /* MAFormViewController.m in Sources */,
+				D6626B6019AA2C3900A9A82D /* MAActionFieldCell.m in Sources */,
 				278140431980A6D800053209 /* MATextFieldCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

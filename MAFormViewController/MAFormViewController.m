@@ -10,6 +10,8 @@
 #import "MAFormViewController.h"
 #import "MAFormField.h"
 #import "MATextFieldCell.h"
+#import "MAActionField.h"
+#import "MAActionFieldCell.h"
 
 static NSString * const kDefaultUnsavedChangesMessage = @"You have unsaved changes. Are you sure you want to cancel?";
 static NSString * const kDiscardUnsavedChangesYes = @"Yes";
@@ -86,7 +88,18 @@ static NSInteger const kDiscardUnsavedChangesIndex = 1;
             enum MATextFieldActionType action = lastCell ? MATextFieldActionTypeDone : MATextFieldActionTypeNext;
             
             // get the field for this cell in this section
-            MAFormField *field = _cellConfig[sectionIndex][cellIndex];
+            id untypedField = _cellConfig[sectionIndex][cellIndex];
+            
+            if ([untypedField isMemberOfClass:MAActionField.class]) {
+                MAActionField *actionField = untypedField;
+                
+                MAActionFieldCell *actionFieldCell = [[MAActionFieldCell alloc] initFieldWithTitle:actionField.title actionBlock:actionField.actionBlock];
+                
+                [cellsForSection insertObject:actionFieldCell atIndex:0];
+                continue;
+            }
+            
+            MAFormField *field = untypedField;
             
             // create the cell with the given type, the appropriate action, and the action handler
             // will set the correct field as the first responder or resign the first responder appropriately
